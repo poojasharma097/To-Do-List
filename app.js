@@ -8,6 +8,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
+const port = process.env.PORT || 3000;
+
 mongoose.connect(process.env.URL);
 
 const itemsSchema = {
@@ -135,6 +137,6 @@ app.get("/:customListName", function(req,res){
             });
 })
 
-app.listen(3000,function(){
-    console.log("Server is running on port 3000");
+app.listen(port, "0.0.0.0", function(){
+    console.log("Server is running.");
 })
