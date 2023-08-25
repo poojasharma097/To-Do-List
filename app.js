@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 mongoose.connect(process.env.URL);
 
